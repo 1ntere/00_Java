@@ -1,0 +1,12 @@
+package com.kh.whileEx;
+/*
+while문
+	특정조건이 참인 동안 반복실행할 때 사용
+	while은 조건이 처음부터 거짓이면 아예 실행되지 않음
+
+do-while
+
+*/
+public class While문 {
+
+}

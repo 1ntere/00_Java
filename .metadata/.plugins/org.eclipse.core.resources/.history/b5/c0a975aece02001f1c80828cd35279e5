@@ -1,0 +1,31 @@
+package com.kh.practice.file.model.dao;
+
+import java.util.*;
+
+public class FileDAO {
+	private Map<String, String> files = new HashMap<>();
+	
+	//containsKey() - 파일 이름이 존재하는지 확인
+	public boolean checkName(String file) {
+		return files.containsKey(file);
+		
+	}
+	
+	//put() - 파일 저장 유무 확인
+	public void fileSave(String file, String s) {
+		files.put(file,  s);
+		System.out.println("파일 저장 완료 : " + file);
+	}
+	
+	
+	
+	
+	/*
+	public static void main(String[] args) {
+		FileMenu fm = new FileMenu();
+		while(true) {
+			fm.mainMenu();
+		}
+	}
+	*/
+}

@@ -1,0 +1,19 @@
+package com.kh.SocketEx;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+//채팅 시작 주최자
+//port의 경우 2자리, 3자리, 4자리는 컴퓨터에서 약속으로 지정한 숫자가 이미 존재함
+//따라서 지금 예제에서는 5자리의 포트번호를 사용
+public class ServerPre {
+	public static void main(String[] args) {
+		try {
+			ServerSocket server = new ServerSocket(12370);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

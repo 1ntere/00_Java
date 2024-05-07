@@ -1,0 +1,9 @@
+package com.kh.practice.score.view;
+
+import java.util.Scanner;
+
+public class ScoreMenu {
+	private Scanner sc = new Scanner(System.in);
+	private ScoreController scr = new ScoreController();
+	
+}

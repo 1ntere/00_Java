@@ -1,0 +1,14 @@
+package com.kh.variable.ex;
+
+public class EnumPre {
+	public enum 무지개 {
+		빨간색;
+		주황색;
+		노란색;
+		초록색;
+		파랑색;
+		남색;
+		보라색;
+		
+	}
+}

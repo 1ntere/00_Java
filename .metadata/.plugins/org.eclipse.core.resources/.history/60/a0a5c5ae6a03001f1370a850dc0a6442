@@ -1,0 +1,9 @@
+package com.kh.ThreadEx;
+/*
+Thread(스레드) : 실
+스레드는 컴퓨터에서 실제로 작업을 수행하는 것을 의미
+
+*/
+public class ThreadEx {
+
+}

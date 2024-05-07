@@ -1,0 +1,20 @@
+package com.kh.ThreadPre;
+
+import com.kh.ThreadEx.ThreadEx;
+import com.kh.ThreadEx.ThreadEx2;
+
+public class 스레드시작 {
+	//main 메서드 생성
+	public static void main(String[] args) {
+
+		//for 문으로 스레드 2개 만들기
+		for (int i = 0; i < 2; i++) {
+			//ThreadEx2의 부모이기 때문에 Thread 왼쪽에서 작성하는 것이 가능
+			Thread t = new 스레드시작(i);
+			t.start();
+		}
+		//start() 스레드 시작
+	//for문 } 닫는 중괄호 밑에 메인메서드 종료 출력 작성 후 실행해보기
+	}
+
+}

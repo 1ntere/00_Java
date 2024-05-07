@@ -1,0 +1,42 @@
+package com.kh.practice.list.music.model.vo;
+
+public class Music {
+//필드
+	private String title;
+	private String singer;
+//메서드
+	//Setter
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public void setSinger(String singer) {
+		this.singer = singer;
+	}
+	//Getter
+	public String getTitle() {
+		return title;
+	}
+	public String getSinger() {
+		return singer;
+	}
+	//생성자 - 기본
+	public Music() {
+		
+	}
+	//생성자 - 필수
+	public Music(String title, String singer) {
+		this.title = title;
+		this.singer = singer;
+	}
+	
+	//toString를 사용하지 않으면
+	//목록이나 값이 나오지 않고 주소로 나옴 //
+	//String으로 전달해주는 값이 없기 때문
+	/*@Override
+	public String toString() {
+		return "곡명 : " + title + ", 가수명 : " + singer;
+	}*/
+	
+	
+
+}

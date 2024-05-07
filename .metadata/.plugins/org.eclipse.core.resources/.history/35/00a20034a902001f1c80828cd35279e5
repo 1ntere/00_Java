@@ -1,0 +1,5 @@
+package com.kh.imageEx;
+
+public class ImageResizePre {
+	//원본 이미지 pigs.pig, 복사할 이미지 pigs_cute.jpg, 가로 400, 세로 200
+}

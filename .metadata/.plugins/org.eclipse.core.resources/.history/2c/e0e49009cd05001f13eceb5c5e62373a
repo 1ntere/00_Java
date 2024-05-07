@@ -1,0 +1,11 @@
+package com.kh.SocketEx;
+/*
+SocketEx : 컴퓨터에서 통신을 하게 해주는 역할을 함
+
+메서드
+	생성자
+		Socket() : 기본생성자 - 사용자가 소켓을 생성할 때 사용
+*/
+public class SocketEx {
+
+}

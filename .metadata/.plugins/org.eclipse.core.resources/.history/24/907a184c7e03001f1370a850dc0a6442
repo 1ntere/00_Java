@@ -1,0 +1,76 @@
+package com.kh.variable.ex;
+/*
+Enum(열거형)
+列 : 나열하다 벌리다 늘어서다 열
+擧 : 들다 일으키다 행하다 열
+늘어서 작성해 놓은 것을 행함
+
+하나의 변수에 상수(상시적으로 고정된 이름)를 나열해 놓은것
+
+메서드
+	values() 				: Enum 에 적어놓은 모든 상수를 배열로 반환
+	valueOf(String 이름) 		: 이름과 일치하는 Enum 상수를 반환
+	ordinal() 				: Enum 상수의 순서를 전달
+	name() 					: Enum 상수의 이름 반환
+	compareTo(EnumType e) 	: 다른 Enum 상수와 순서 비교
+	toString() 				: Enum 상수의 문자열 표현 반환
+	getClass() 				: Enum 클래스의 Class 객체 반환
+*/
+public class EnumEx {
+	public enum 날짜들 {
+		월요일,
+		화요일,
+		수요일,
+		목요일,
+		금요일,
+		토요일,
+		일요일
+	}
+	
+	public enum 계절 {
+	//index  	 0   1   2    3
+				봄, 여름, 가을, 겨울
+	}
+	
+	public static void main(String[] args) {
+		//각 요일 출력
+		System.out.println("월요일 : "+날짜들.월요일);
+		System.out.println("화요일 : "+날짜들.화요일);
+		System.out.println("수요일 : "+날짜들.수요일);
+		System.out.println("목요일 : "+날짜들.목요일);
+		System.out.println("금요일 : "+날짜들.금요일);
+		System.out.println("토요일 : "+날짜들.토요일);
+		System.out.println("일요일 : "+날짜들.일요일);
+		System.out.println("===============");
+		
+		//각 계절 출력
+		계절 계절들[] = 계절.values();
+		System.out.println("계절들에 정의된 모든 상수");
+		for (계절 s : 계절들) {
+			System.out.println(s);
+		}
+		System.out.println("===============");
+		
+		//valueOf(String 이름) - 이름과 일치하는 Enum 상수를 반환
+		//계절 봄 = 계절.valueOf("spring");
+			//exception - 감싸서 없으면 예외처리 진행
+		계절 봄 = 계절.valueOf("봄");
+		System.out.println("봄 과 일치하는 상수 : "+봄);//봄
+		
+		//ordinal() - 상수의 index를 출력
+		System.out.println("봄 상수의 순서 : "+봄.ordinal());//0
+			//변수 계절에서 봄의 index는 0번 (맨 처음)
+		
+		//name() - 상수의 이름을 전달
+		System.out.println("봄 상수의 이름 : "+봄.name());//봄
+		
+		//toString() - values()를 사용했던 것처럼 사용됨
+		System.out.println(봄.toString());//봄
+		
+		//getClass() - 클래스 객체 반환
+		System.out.println("클래스의 객체는 : "+계절들.getClass());//class [Lcom.kh.variable.ex.EnumEx$계절;
+			//계절의 배열을 나타내는 값
+		
+		
+	}
+}

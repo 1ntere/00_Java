@@ -1,0 +1,21 @@
+package com.kh.practice.score.model.dao;
+
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class ScoreDAO {
+	private final String FILE_PATH = "score.txt";
+	
+	
+	public void saveScore(String name, int kor, int eng, int math, int sum, double avg) {
+		
+		try {
+			DataOutputStream dos = new DataOutputStream(new FileOutputStream(FILE_PATH));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}

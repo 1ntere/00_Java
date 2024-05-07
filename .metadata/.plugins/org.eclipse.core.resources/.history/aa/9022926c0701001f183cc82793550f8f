@@ -1,0 +1,16 @@
+package com.kh.javaAPIEx;
+/*
+Java API
+
+API : Application Programming Interface
+
+코드로 작성한 프로그램을 이용할 수 있도록 연결해준 주소
+
+Application = 지원, 신청, 응용
+Programming = 코드로 작성함
+Interface = 서로 연결해줌
+
+*/
+public class JavaAPIService {
+
+}

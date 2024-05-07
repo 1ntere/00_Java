@@ -1,0 +1,18 @@
+package com.kh.imageEx;
+/*
+BufferedImage : 이미지 데이터를 저장하고 처리하는데 사용
+
+Image : 인터페이스로 이미지를 표현하는 추상화된 개념을 제공
+
+ImageIO : 이미지를 파일로부터 읽고 출력하는 이미지 In Out
+
+*/
+public class ImageResize {
+	public static void main(String[] args) {
+		//원본 이미지 경로
+		
+		String 원본이미지 = "src/com/kh/imageRx/marley.jpg";
+		String 사이즈조정이미지 = "src/com/kh/imageRx/marley_cute.jpg";
+	}
+
+}

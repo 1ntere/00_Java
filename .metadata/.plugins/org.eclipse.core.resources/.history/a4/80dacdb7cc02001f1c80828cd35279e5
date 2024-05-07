@@ -1,0 +1,15 @@
+package com.kh.practice.file.model.dao;
+
+import com.kh.practice.file.view.FileMenu;
+
+public class FileDAO {
+	private Map<String, String> files = new HashMap<>();
+	
+	
+	public static void main(String[] args) {
+		FileMenu fm = new FileMenu();
+		while(true) {
+			fm.mainMenu();
+		}
+	}
+}

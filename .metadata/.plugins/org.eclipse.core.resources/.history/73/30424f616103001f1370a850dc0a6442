@@ -1,0 +1,64 @@
+package com.kh.imageEx;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ImagePR2 {
+//바탕화면에 이미지폴더/동물이름.txt 파일 만들어준 후
+	//동물이름 소 고양이 돼지 토끼 호랑이 이름을 \n 이용해서 만들어주고
+	//동물이름 만들어 준 다음에
+	//좋아하는 동물 이름으로 폴더 이름 변경한 다음 삭제하기
+	public static void main(String[] args) throws Exception {
+		String 바탕화면경로 = System.getProperty("user.home") + "/Desktop";
+		
+		//폴더 만들기
+		File 폴더 = new File(바탕화면경로+"/이미지폴더");
+		폴더.mkdirs();
+		System.out.println(폴더.getName() + " 폴더 생성 완료!");
+		
+		//파일 만들기
+		File 파일 = new File(폴더+"/동물이름.txt");
+		파일.createNewFile();
+		System.out.println(파일.getName() + " 파일 생성 완료!");
+		
+		//animal List만들기
+		ArrayList<String> animal = new ArrayList<>(Arrays.asList("소", "고양이", "돼지", "토끼", "호랑이"));
+		
+		//write 하기
+		for (int i = 0; i < animal.size(); i++) {
+			if (i == 0) {
+				FileWriter 글쓰기 = new FileWriter(파일);
+				글쓰기.write(animal.get(i)+"\n");
+				글쓰기.close();
+				System.out.println(i+"번 동물 작성 완료");
+			} else if (i > 0 && i < animal.size()) {
+				FileWriter 글쓰기 = new FileWriter(파일, true);
+				글쓰기.write(animal.get(i)+"\n");
+				글쓰기.close();
+				System.out.println(i+"번 동물 작성 완료");
+			}
+		}
+		System.out.println("모든 동물 작성 완료");
+		
+		//폴더 이름 변경하기
+		File 새로운이름 = new File(폴더+"/호랑이.txt");
+		if (파일.exists()) {
+			//만약에 파일 이름을 성공적으로 변경했다면
+			if (파일.renameTo(새로운이름)) {
+				System.out.println("파일 이름이 성공적으로 변경되었습니다.");
+			} else {
+				System.out.println("파일 이름 변경에 실패했습니다.");
+			}
+		} else {
+			System.out.println("파일 이름이 존재하지 않습니다. 만들어주세요^^.");
+		}
+		
+		//폴더 삭제하기
+		파일.delete();
+		System.out.println("파일을 성공적으로 삭제하였습니다.");
+	}
+	
+}

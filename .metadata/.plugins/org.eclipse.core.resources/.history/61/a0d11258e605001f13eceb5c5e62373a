@@ -1,0 +1,5 @@
+package com.kh.SocketEx;
+
+public class ClientPre {
+	BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+}

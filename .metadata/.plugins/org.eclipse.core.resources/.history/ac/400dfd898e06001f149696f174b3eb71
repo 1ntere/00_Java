@@ -1,0 +1,21 @@
+package com.kh.MethodEx;
+/*
+메서드(method)
+	특정 행동이나 작업을 진행하는 코드 블록 {    }
+	ex) 메서드급 연기!
+	
+	
+	Setter : 필드에 작성한 변수를 복사해서 원본 변수 대신에 값을 변경하고 저장하는 메서드
+		public void set변수명(자료형 매개변수) {
+			this.변수 = 매개변수;
+		}
+	Getter : Setter에 저장된 변수값을 다른 곳에서 사용할 수 있도록 전달해주는 메서드
+	
+	
+	
+	
+
+*/
+public class MethodEx {
+
+}

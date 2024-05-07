@@ -1,0 +1,8 @@
+package dom.kh.test.main;
+
+public class Test3 {
+	public static void main(String[] args) {
+		//switch문 실행해보기
+		
+	}
+}

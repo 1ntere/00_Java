@@ -1,0 +1,41 @@
+package com.kh.imageEx;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class ImagePR2 {
+//바탕화면에 이미지폴더/동물이름.txt 파일 만들어준 후
+	//동물이름 소 고양이 돼지 토끼 호랑이 이름을 \n 이용해서 만들어주고
+	//동물이름 만들어 준 다음에
+	//좋아하는 동물 이름으로 폴더 이름 변경한 다음 삭제하기
+	public static void main(String[] args) throws Exception {
+		String 바탕화면경로 = System.getProperty("user.home") + "/Desktop";
+		
+		File 폴더 = new File(바탕화면경로+"/이미지폴더");
+		폴더.mkdirs();
+		System.out.println(폴더.getName() + " 폴더 생성 완료!");
+		
+		File 파일 = new File(폴더+"/동물이름.txt");
+		파일.createNewFile();
+		System.out.println(파일.getName() + " 파일 생성 완료!");
+		
+		String[] animal = new String[5];
+		
+		for (int i = 0; i < animal.length; i++) {
+			if (i == 0) {
+				FileWriter 글쓰기 = new FileWriter(파일);
+				글쓰기.write("소\n");
+				글쓰기.close();
+				System.out.println(i+"번 동물 작성 완료");
+			} else if (i > 0 && i < animal.length) {
+				FileWriter 글쓰기 = new FileWriter(파일, true);
+				글쓰기.write("소\n");
+				글쓰기.close();
+				System.out.println(i+"번 동물 작성 완료");
+			}
+		}
+		System.out.println("모든 동물 작성 완료");
+	}
+	
+}

@@ -1,0 +1,37 @@
+package com.kh.practice.score.view;
+
+import java.util.Scanner;
+
+import com.kh.practice.score.controller.ScoreController;
+
+public class ScoreMenu {
+	private Scanner sc = new Scanner(System.in);
+	private ScoreController scr = new ScoreController();
+	
+	public void mainMenu() {
+		while (true) {
+			System.out.println("1. 점수 저장");
+			System.out.println("2. 점수 출력");
+			System.out.println("3. 종    료");
+			System.out.print("메뉴 선택 : ");
+			
+			int choice = sc.nextInt();
+			sc.nextLine();//남아있는 버퍼(엔터와 같은..)지우기
+			
+			switch (choice) {
+			case 1:
+				//점수 저장
+				break;
+			case 2:
+				//점수 보기
+				break;
+			case 0:
+				System.out.println("프로그램을 종료합니다.");
+				return;
+			default:
+				System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+				
+			}
+		}
+	}
+}

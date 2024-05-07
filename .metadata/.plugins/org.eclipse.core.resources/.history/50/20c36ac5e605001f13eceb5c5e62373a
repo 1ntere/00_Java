@@ -1,0 +1,8 @@
+package com.kh.SocketEx;
+
+import java.net.Socket;
+
+public class ClientPre {
+	Socket socket = new Socket("localhost", 12341);
+	BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+}

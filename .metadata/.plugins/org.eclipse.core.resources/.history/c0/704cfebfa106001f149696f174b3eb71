@@ -1,0 +1,16 @@
+package dom.kh.test.main;
+
+import java.util.Scanner;
+
+public class Test3 {
+	public static void main(String[] args) {
+		//switch문 실행해보기
+		Scanner 스캐너 = new Scanner(System.in);
+		System.out.print("숫자 작성 : ");
+		int 날짜 = 스캐너.nextInt();
+		String 할일;
+		
+		
+		
+	}
+}

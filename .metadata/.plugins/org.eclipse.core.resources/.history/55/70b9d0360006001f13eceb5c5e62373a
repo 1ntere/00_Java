@@ -1,0 +1,16 @@
+package com.kh.PropertiesEx;
+/*
+Properties = 속성, 설정
+	필히 넣어야하는 값을 작성
+	
+	Map이랑 비슷한 형태의 데이터를 관리하는데 사용
+	
+	key(키) 와 value(값)으로 이루어져 있음
+
+
+
+
+*/
+public class PropertiesEx {
+
+}

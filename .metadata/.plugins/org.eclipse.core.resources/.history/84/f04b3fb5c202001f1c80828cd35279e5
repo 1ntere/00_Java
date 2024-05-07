@@ -1,0 +1,9 @@
+package com.kh.FileEx;
+/*
+FileWriter : 파일에 문자를 쓰기 위한 객체
+	파일이 없다면 파일을 생성하고 파일에 데이터를 바로 쓸 수 있음
+
+*/
+public class FileWriteEx {
+
+}

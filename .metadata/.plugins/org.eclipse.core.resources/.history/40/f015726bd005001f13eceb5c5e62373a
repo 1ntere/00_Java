@@ -1,0 +1,10 @@
+package com.kh.SocketEx;
+
+import java.net.Socket;
+
+//파티참가자
+public class ClientEx {
+	public static void main(String[] args) {
+		Socket 참가자 = new Socket();
+	}
+}

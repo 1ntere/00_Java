@@ -1,0 +1,18 @@
+package com.kh.practice.score.view;
+
+import java.util.Scanner;
+
+import com.kh.practice.score.controller.ScoreController;
+
+public class ScoreMenu {
+	private Scanner sc = new Scanner(System.in);
+	private ScoreController scr = new ScoreController();
+	
+	public void mainMenu() {
+		while (true) {
+			System.out.println("1. 점수 저장");
+			System.out.println("2. 점수 출력");
+			System.out.println("3. 종료");
+		}
+	}
+}

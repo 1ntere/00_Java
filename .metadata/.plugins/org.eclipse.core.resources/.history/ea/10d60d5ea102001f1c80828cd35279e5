@@ -1,0 +1,12 @@
+package com.kh.imageEx;
+
+public class ImageCopyPre {
+	public static void main(String[] args) {
+		//원본이미지 hogam, 복사이미지 hogam_cute
+		String 원본이미지 = "src/com/kh/imageEx/hogam.jpg";
+		String 복사이미지 = "src/com/kh/imageEx/hogam_cute.jpg";
+		
+		FileInputStream 파일읽기 = new FileInputStream(원본이미지);
+		FileOutputStream 파일쓰기 = new FileOutputStream(복사이미지);
+	}
+}

@@ -1,0 +1,11 @@
+package com.kh.variable.ex;
+/*
+Enum(열거형)
+列 : 나열하다 벌리다 늘어서다 열
+擧 : 들다 일으키다 행하다 열
+늘어서 작성해 놓은 것을 행함
+
+*/
+public class EnumEx {
+
+}

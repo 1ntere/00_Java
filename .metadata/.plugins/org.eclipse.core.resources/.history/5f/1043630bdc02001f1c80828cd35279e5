@@ -1,0 +1,10 @@
+package com.kh.practice.book.model.vo;
+
+public class Book {
+//ÇÊµå
+	private String title;
+	private String author;
+	private int price;
+	private Calendar date;
+	private double discount;
+}

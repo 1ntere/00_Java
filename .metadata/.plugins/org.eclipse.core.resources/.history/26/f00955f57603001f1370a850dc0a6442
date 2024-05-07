@@ -1,0 +1,24 @@
+package com.kh.variable.ex;
+
+public class EnumPre {
+	//enum 무지개 (빨간색~보라색)
+	public enum 무지개 {
+		빨간색,
+		주황색,
+		노란색,
+		초록색,
+		파랑색,
+		남색,
+		보라색
+	}
+	//main (빨간색~보라색) 출력
+	public static void main(String[] args) {
+		System.out.println("빨간색 : "+무지개.빨간색);
+		System.out.println("주황색 : "+무지개.주황색);
+		System.out.println("노란색 : "+무지개.노란색);
+		System.out.println("초록색 : "+무지개.초록색);
+		System.out.println("파랑샌 : "+무지개.파랑색);
+		System.out.println("남색 : "+무지개.남색);
+		System.out.println("보라색 : "+무지개.보라색);
+	}
+}

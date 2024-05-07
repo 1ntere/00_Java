@@ -1,0 +1,19 @@
+package com.kh.AddressEx;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class AddressPre {
+	public static void main(String[] args) {
+		//www.google.com
+		try {
+			InetAddress 林家 = InetAddress.getByName("www.google.com");
+			System.out.println("龋胶飘疙 : " + 林家.getHostName());
+			System.out.println("IP 林家 : " + 林家.getHostAddress());
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

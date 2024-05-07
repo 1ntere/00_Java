@@ -1,0 +1,21 @@
+package com.kh.imageEx;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+public class ImageResizePre {
+	//원본 이미지 pigs.jpg, 사이즈 조정할 이미지 pigs_cute.jpg, 가로 400, 세로 200
+	
+	String 원본이미지 = "src/com/kh/imageEx/pigs.jpg";
+	String 사이즈조정이미지 = "src/com/kh/imageEx/pigs_cute.jpg";
+	
+	int 가로크기 = 400;
+	int 세로크기 = 200;
+	
+	BufferedImage 원본이미지데이터 = ImageIO.read(new File(원본이미지));
+	
+	BufferedImage 크기조정이미지 = new BufferedImage(가로크기, 세로크기, BufferedImage.TYPE_INT_RGB);
+	
+}

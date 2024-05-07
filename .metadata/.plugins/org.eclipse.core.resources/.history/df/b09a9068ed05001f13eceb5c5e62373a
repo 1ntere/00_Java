@@ -1,0 +1,27 @@
+package com.kh.StackEx;
+
+import java.util.Stack;
+
+public class StackPre {
+	public static void main(String[] args) {
+		Stack<Integer> 스택 = new Stack<>();
+		스택.push(10);
+		스택.push(30);
+		스택.push(50);
+		스택.push(40);
+		스택.push(20);
+		
+		System.out.println(스택.pop());//20
+			//20이 반환되어 출력되고 사라짐
+		
+		System.out.println(스택.peek());//40
+			//현재 스택의 맨 위에 있는 값 : 40
+		
+		boolean 값존재유무 = 스택.isEmpty();
+		System.out.println(값존재유무);//false
+			//현재 스택에는 10 30 50 40, 총 4개의 값이 존재
+		
+		System.out.println(스택.size());//4
+			//현재 스택에는 10 30 50 40, 총 4개의 값이 존재
+	}
+}

@@ -1,0 +1,20 @@
+package com.kh.variableEx;
+/*
+변수
+	자료형(기본)
+		숫   자	: byte, short, int	//기본 값 : int
+		문   자	: char				//'' 사용, 한 글자만 들어갈 수 있음
+		실   수	: float, double		//기본 값 : double
+		참, 거짓	: boolean			//기본 값 : false
+	자료형(참조)
+		문자열	: String			//"" 사용, 문자를 모두 나열하는 문자열, 특수문자 등 모든 것 사용 가능
+	상수형
+		final 자료형 상수명 = 값;
+		final int MAX_NUM = 100;	//상시적으로 변하지 않는 수	, 값의 변화 절대 x, 대문자로 표기
+	열거형
+		상수를 하나씩 작성하기 번거로우니 관련 있는 상수들을 한번에 {}안에 작성해서
+		final과 자료형을 생략해서 작성하는 상수 표기 방법
+*/
+public class VariableEx {
+	
+}

@@ -1,0 +1,21 @@
+package com.kh.StackEx;
+
+import java.util.Stack;
+
+public class StackPre {
+	public static void main(String[] args) {
+		Stack<Integer> 스택 = new Stack<>();
+		스택.push(10);
+		스택.push(30);
+		스택.push(50);
+		스택.push(40);
+		스택.push(20);
+		
+		System.out.println(스택.pop());
+		
+		System.out.println(스택.peek());
+		
+		boolean 값존재유무 = 스택.isEmpty();
+		System.out.println(값존재유무);
+	}
+}

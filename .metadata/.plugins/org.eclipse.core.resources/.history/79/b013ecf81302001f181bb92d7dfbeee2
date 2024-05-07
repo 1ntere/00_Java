@@ -1,0 +1,10 @@
+package com.kh.practice.list.music.model.compare;
+
+import java.util.Collections;
+
+public class AscTitle {
+	//오름차순
+	public void ascTitle() {
+		Collections.sort(list);
+	}
+}

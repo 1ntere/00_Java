@@ -1,0 +1,9 @@
+package com.kh.AddressEx;
+
+import java.net.InetAddress;
+
+public class AddressPre {
+	//www.google.com
+	InetAddress аж╪р = InetAddress.getByName("www.google.com");
+	
+}

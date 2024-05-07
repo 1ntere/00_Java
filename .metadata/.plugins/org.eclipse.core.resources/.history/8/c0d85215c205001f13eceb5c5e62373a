@@ -1,0 +1,19 @@
+package com.kh.AddressEx;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
+public class AddressPre {
+	public static void main(String[] args) {
+		//www.google.com의 호스트명과 IP주소 가져오기
+		try {
+			InetAddress 주소 = InetAddress.getByName("www.google.com");
+			System.out.println("호스트명 : " + 주소.getHostName());//www.google.com
+			System.out.println("IP 주소 : " + 주소.getHostAddress());//172.217.24.228
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

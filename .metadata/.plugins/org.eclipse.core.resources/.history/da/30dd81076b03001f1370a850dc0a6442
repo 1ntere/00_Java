@@ -1,0 +1,11 @@
+package com.kh.ThreadEx;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ThreadRx 스레드 = new ThraedEx();
+		스레드.start();
+
+	}
+
+}

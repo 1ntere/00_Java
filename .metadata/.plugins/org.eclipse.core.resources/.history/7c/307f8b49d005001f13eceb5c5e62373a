@@ -1,0 +1,8 @@
+package com.kh.SocketEx;
+
+//파티참가자
+public class ClientEx {
+	public static void main(String[] args) {
+		
+	}
+}

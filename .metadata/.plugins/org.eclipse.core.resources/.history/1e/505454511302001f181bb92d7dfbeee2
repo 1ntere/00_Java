@@ -1,0 +1,70 @@
+package com.kh.practice.list.music.controller;
+
+import java.util.*;
+
+import com.kh.practice.list.music.model.vo.Music;
+
+public class MusicController {
+	//음악 목록
+	List<Music> list = new ArrayList<>();
+	
+	//마지막 자리에 음악 추가
+	public int addList(String title, String singer) {
+		//		Music 객체에 넣어줘야 함
+		//					DB 추가에 성공하면 1, 실패하면 0
+		//							만약에 추가 성공이 ? true : false
+		return list.add(new Music(title, singer)) ? 1 : 0;
+	}
+	
+	//첫번째 자리에 음악 추가
+	public int addAtZero(String title, String singer) {
+		//목록에 추가하는 데 맨 앞에다가 다시 새로 자리값을 만들고
+		//내가 추가하는 값이 무조건 0 자리에 추가 될 수 있도록 추가
+		list.add(0, new Music(title, singer));
+		return 1;
+	}
+	
+	//전체 곡 목록 출력
+	public List<Music> printAll() {
+		return list;
+	}
+	
+	//특정 곡 검색
+	public Music searchMusic(String title) {
+		//for-each문 사용해서 
+		for(Music music : list) {
+			//만약에 내가 원하는 제목이 들어오면
+			if (music.getTitle().equals(title)) {
+				return music;
+			} else {
+				System.out.println("찾으시는 곡이 없습니다.");
+			}
+		}
+		return null;
+	}
+	
+	//특정 곡 삭제
+	public Music removeMusic(String title) {
+			// list는 length 대신 size() 사용
+		for (int i = 0; i < list.size(); i++) {
+			//만약에 내가 입력한 제목과 list에서 찾은 제목이 같다면 삭제
+			if (list.get(i).getTitle().equals(title)) {
+				return list.remove(i);
+			}			
+		}
+		return null;
+	}
+	
+	//특정 곡 정보 (가수) 수정
+	public Music setMusic(String title, String singer) {
+		//for - each 내가 원하는 제목과 가수가 있는지 확인하기
+		for (Music music : list) {
+			if (music.getTitle().equals(title)) {
+				music.setSinger(singer);
+				return music;
+			}
+		}
+		return null;
+	}
+	
+}

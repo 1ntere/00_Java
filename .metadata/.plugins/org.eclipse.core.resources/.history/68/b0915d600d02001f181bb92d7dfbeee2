@@ -1,0 +1,108 @@
+package com.kh.practice.list.music.view;
+
+import java.util.Scanner;
+
+import com.kh.practice.list.music.controller.MusicController;
+
+public class MusicView {
+	//스캐너로 원하는 음악 관리 번호를 입력하기
+	private Scanner sc = new Scanner(System.in);
+	private MusicController mc = new MusicController();
+	
+	public void mainMenu() {
+		while (true) {
+			System.out.println("=== 음악 관리 프로그램 ===");
+			System.out.println("1. 마지막 위치에 곡 추가");
+			System.out.println("2. 첫 위치에 곡 추가");
+			System.out.println("3. 전체 곡 목록 출력");
+			System.out.println("9. 프로그램 종료");
+			System.out.print("메뉴 선택 : ");
+			//번호를 입력받을 공간 만들어주기
+			int choice = sc.nextInt();
+			sc.nextLine();
+			
+			switch (choice) {
+			case 1:
+				//마지막 위치로 음악 추가
+				addList();
+				break;
+			case 2:
+				//첫번째 위치로 음악 추가
+				addAtZero();
+				break;
+			case 3:
+				//전체 곡 목록 출력
+				//printAll();
+				break;
+			case 4:
+				//특정 곡 검색
+				//searchMusic();
+				break;
+			case 5:
+				//특정 곡 삭제
+				//removeMusic();
+				break;
+			case 6:
+				//특정 곡 정보 수정
+				//setMusic();
+				break;
+			case 7:
+				//곡명 오름차순 정렬
+				//ascTitle();
+				break;
+			case 8:
+				//가수명 내림차순 정렬
+				//descSinger();
+				break;
+			case 9:
+				//프로그램 종료
+				System.out.println("프로그램을 종료합니다.");
+				return;
+			default:
+				System.out.println("잘못된 메뉴 선택입니다.");
+			}
+		}
+		
+	}
+	
+	//음악 추가
+	public void addList() {
+		System.out.print("곡 명 입력 : ");
+		String title = sc.nextLine();
+		
+		System.out.print("가수 명 입력 : ");
+		String singer = sc.nextLine();
+		
+		//곡과 가수 저장하기
+		mc.addList(title, singer);
+	}
+	
+	//첫 번째 위치에 바로 음악 추가하기
+	public void addAtZero() {
+		System.out.println("곡명 입력 : ");
+		String title = sc.nextLine();
+		
+		System.out.println("가수명 입력 : ");
+		String singer = sc.nextLine();
+		
+		//음악을 추가하는데 맨 앞에 추가
+		mc.addAtZero(title, singer);
+	}
+	
+	//모든 음악 목록 출력하기
+	public void printAll() {
+		System.out.println(mc.printAll());
+	}
+	
+	//특정 곡 검색
+	public void searchMusic() {
+		System.out.print("검색할 곡 명 입력 : ");
+		String title = sc.nextLine();
+		System.out.println(mc.searchMusic(title));
+	}
+	
+	//특정 곡 삭제
+	public void removeMusic() {
+		
+	}
+}

@@ -1,0 +1,25 @@
+package com.kh.FileEx;
+
+import java.io.BufferedWriter;
+
+/*
+StringBuilder : 속도가 빠름
+*/
+public class BuilderWriterEx {
+	public static void main(String[] args) {
+		//파일 생성
+		String 파일이름 = "줄.txt";
+		
+		//StringBuilder 를 사용해서 파일에 쓸 내용 작성
+		StringBuilder 빌더 = new StringBuilder();
+		빌더.append("첫 번째 줄이어라. \n");
+		빌더.append("두 번째 줄이어라. \n");
+		빌더.append("세 번째 줄이어라. \n");
+		
+		//FileWriter 객체를 생성해서 파일에 쓰기 모드로 열기
+		//BufferedWriter를 사용해서 더 빨리 가져올 수 있도록 함
+		
+		BufferedWriter 버퍼글쓰기 = new BufferedWriter(new FileWriter(파일이름));
+		
+	}
+}

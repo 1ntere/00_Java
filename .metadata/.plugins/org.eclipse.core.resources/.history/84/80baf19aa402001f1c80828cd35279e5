@@ -1,0 +1,10 @@
+package com.kh.imageEx;
+/*
+BufferedImage : 이미지 데이터를 저장하고 처리하는데 사용
+
+
+
+*/
+public class ImageResize {
+
+}

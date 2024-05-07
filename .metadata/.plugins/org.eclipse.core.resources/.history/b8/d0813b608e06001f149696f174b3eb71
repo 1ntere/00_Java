@@ -1,0 +1,15 @@
+package com.kh.MethodEx;
+/*
+메서드(method)
+	특정 행동이나 작업을 진행하는 코드 블록 {    }
+	ex) 메서드급 연기!
+	
+	
+	//Setter
+	//Getter
+	
+
+*/
+public class MethodEx {
+
+}

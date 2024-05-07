@@ -1,0 +1,16 @@
+package com.kh.practice.file.view;
+
+import java.util.Scanner;
+
+import com.kh.practice.file.controller.FileController;
+
+public class FileMenu {
+	//키보드로 입력받을 Scanner 작성
+	Scanner sc = new Scanner(System.in);
+	FileController fc = new FileController();
+	
+	public void mainMenu() {
+		System.out.println();
+	}
+	
+}

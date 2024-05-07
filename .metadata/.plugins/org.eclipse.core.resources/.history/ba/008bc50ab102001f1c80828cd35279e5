@@ -1,0 +1,50 @@
+package com.kh.FileEx;
+
+import java.io.File;
+
+/*
+File
+	파일이나 / 폴더(디렉토리)를 관리하는 클래스
+	파일 생성, 제거, 이름, 크기, 마지막 수정일, 존재여부 등의 기능을 제공
+메서드
+	boolean mkdir()			: 폴더 생성
+	boolean mkdirs()		: 경로로 지정해준 모든 폴더 생성
+							  ex) com.khc.FileEx하면 한번에 여러 개의 폴더가 생성됨
+	boolean createNewFile()	: 파일 생성
+	boolean delete			: 파일이나 폴더 삭제
+	String getName()		: 파일 이름을 가져와서 보여줌
+	String parent()			: 파일이 저장된 폴더를 알려줌
+	String getPath()		: 폴더 전체 경로 확인
+	boolean isFile()		: 현재 File 객체가 관리하는게 파일이면 true
+	boolean isDirectory()	: 현재 File 객체가 관리하는게 폴더이면 true
+	boolean exists()		: 파일이나 폴더가 존재한다면 true, 없다면 false
+	long length() 			: 파일 크기 알려줌
+	long lastModified()		: 파일 마지막 수정일 알려줌
+	String[] list			: 폴더 내 파일 목록을 String[] 배열로 보여줌
+	File[] listFiles()		: 폴더 내 파일 목록을 File[] 배열로 보여줌
+*/
+public class FileEx {
+	public static void main(String[] args) {
+		//		C:/Users/user1/Desktop 바탕화면에 폴더 만들기
+		
+		File 폴더만들기 = new File("C:/Users/user1/Desktop/newFFF");
+		
+		//바탕화면에 newFFF 라는 폴더가 존재하는지 확인
+		System.out.println("존재합니까? : " + 폴더만들기.exists());
+		
+		//만약에 폴더가 존재한다면 폴더가 이미 바탕화면에 존재합니다. 라고 얘기하고
+		//존재하지 않는다면 폴더가 존재하지 않습니다. 출력하고 새로 만들어주기
+		if (폴더만들기.exists()) {
+			System.out.println("폴더가 이미 존재합니다.");
+		} else {
+			//폴더 생성
+			System.out.println("폴더가 존재하지 않습니다.");
+			폴더만들기.mkdir();
+			System.out.println("폴더 새로 만들기 성공!");
+			System.out.println(폴더만들기.getName());//폴더 이름 확인
+			System.out.println(폴더만들기.getPath());//폴더 주소 확인
+		}
+		
+		
+	}
+}

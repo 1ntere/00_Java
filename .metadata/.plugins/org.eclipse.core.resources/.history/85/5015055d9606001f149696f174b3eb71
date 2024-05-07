@@ -1,0 +1,9 @@
+package com.kh.IfEx;
+/*
+if (조건) {
+	조건이 참일 때 실행하는 코드;
+}
+*/
+public class IF문 {
+
+}

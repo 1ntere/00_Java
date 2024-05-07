@@ -1,0 +1,50 @@
+package com.kh.FileEx;
+
+import java.io.File;
+import java.io.IOException;
+
+public class FilePre {
+//메서드
+	//기본 생성자
+	public FilePre() {
+		// TODO Auto-generated constructor stub
+	}
+	//void
+	public void 메서드1() {
+		File 텍스트파일 = new File("C:/Users/user1/Desktop/newFFF/파일생성.txt");
+		
+		if (텍스트파일.exists()) {
+			System.out.println("파일이 존재합니다.");
+		} else {//존재하지 않는다면 새로운 파일 만들기
+			//만약에 파일 만들기 성공!
+			try {
+				텍스트파일.createNewFile();
+				System.out.println(텍스트파일.getName() + "파일이 생성되었습니다.");
+			} catch (IOException e) {
+				System.out.println("파일 만들기 실패했습니다.");
+				e.printStackTrace();
+			}
+		}
+	}
+	//void
+	public void 메서드2() {
+		//바탕화면에 뉴폴더라는 폴더 생성하고 뉴폴더 안에 파일생성.txt 파일 만들기
+		File 새로운폴더만들기 = new File("C:/Users/user1/Desktop/뉴폴더");
+		
+		if (새로운폴더만들기.exists()) {
+			System.out.println("폴더가 이미 존재합니다.");
+		} else {
+			System.out.println("폴더가 존재하지 않습니다.");
+			새로운폴더만들기.mkdir();
+			System.out.println("폴더 새로 만들기 성공!");
+			
+		}
+	}
+	
+	//메인 메서드
+	public static void main(String[] args) {
+		FilePre 파일 = new FilePre();
+		파일.메서드1();
+		파일.메서드2();
+	}
+}
